@@ -1,0 +1,31 @@
+html {
+  background-color: white;
+  font-family: "PT Sans", sans-serif;
+  font-weight: bold;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  overflow: hidden;
+  height: 100vh;
+}
+
+#question {
+  font-weight: 400;
+  font-size: clamp(1.5rem, 0.5065rem + 4.4156vw, 10rem);
+  margin: 0;
+}
+
+#answer {
+  font-weight: 700;
+  font-size: clamp(1rem, 0.1818rem + 3.6364vw, 8rem);
+  margin: 0;
+  margin-top: 1rem;
+  background-color: var(--answer-bg);
+  border-radius: 0.5rem;
+  padding: .25rem;
+}

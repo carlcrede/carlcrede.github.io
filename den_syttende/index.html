@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Er det den syttende?</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <p id="question">Er det den syttende?</p>
+  <p id="answer">JA</p>
+</body>
+<script>
+  const isItThe17th = new Date().getDate() == 17 ? true : false;
+  document.getElementById("answer").innerHTML = isItThe17th ? "JA" : "NEJ";
+
+  document.documentElement.style.setProperty('--answer-bg', isItThe17th ? '#00ff00' : '#ff0000');
+
+  if (isItThe17th) window.confetti({
+    spread: 100,
+    particleCount: 200,
+    ticks: 1000
+  });
+</script>
+</html>
