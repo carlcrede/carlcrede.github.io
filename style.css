@@ -19,9 +19,6 @@ html {
 body {
   background: var(--clr-2);
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .wrapper {
@@ -41,13 +38,15 @@ body {
 
 .links {
   display: flex;
+  flex-direction: column;
   gap: 2rem;
   padding-bottom: 2rem;
+  width: 40vw;
+  justify-content: center;
 }
 
 .card {
-  height: 10vh;
-  aspect-ratio: 1.5 / 1;
+  columns: 1;
   background: var(--clr-1);
   border-radius: 0.5rem;
   position: relative;
@@ -86,7 +85,7 @@ body {
     var(--clr-3)
   );
   border-radius: inherit;
-  animation: rotation 20s linear infinite;
+  animation: rotation 10s linear infinite;
 }
 
 .card::after {
